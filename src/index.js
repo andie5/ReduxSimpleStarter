@@ -31,11 +31,11 @@ class App extends Component {
     }
 
   render(){
-    // const videoSearch = _.debounce((term) => { term => this.videoSearch(term) }, 300);
+    const videoSearch = _.debounce((searchTerm) => { searchTerm => this.videoSearch(searchTerm) }, 300);
 
     return (
       <div> 
-        <SearchBar onSearchTermChange={ term => this.videoSearch(term) } />
+        <SearchBar onSearchTermChange={ searchTerm => this.videoSearch(searchTerm) } />
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList 
           onVideoSelect={selectedVideo => this.setState({selectedVideo}) }
