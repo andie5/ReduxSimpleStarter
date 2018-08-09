@@ -1,4 +1,4 @@
-// State argument os not application state, only the state 
+// State argument is not application state, only the state 
 // that this reducer is responsible for
 
 export default function(state = null, action) {
